@@ -1,0 +1,22 @@
+{
+  "name": "ts",
+  "source": "src/index.html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@parcel/transformer-js": "^2.5.0",
+    "@types/faker": "^5.5.9",
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.48.6",
+    "parcel": "^2.5.0"
+  }
+}
