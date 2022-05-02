@@ -1,6 +1,6 @@
 import { CsvFileReader } from './CsvFileReader';
-import { dateStringToDate } from '../utils';
-import { GameResult } from '../Enum';
+import { dateStringToDate } from '../src/utils';
+import { GameResult } from '../src/Enum';
 
 type GameData = [Date, string, string, number, number, GameResult, string];
 

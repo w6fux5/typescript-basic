@@ -1,7 +1,7 @@
-import { dateStringToDate } from '../utils';
-import { GameResult } from '../Enum';
-
-type GameDataType = [Date, string, string, number, number, GameResult, string];
+import { dateStringToDate } from './utils';
+import { GameResult } from './Enum';
+import { GameDataType } from './types';
+import { CsvFileReader } from './CsvFileReader';
 
 interface DataReader {
   data: string[][];
@@ -11,6 +11,10 @@ interface DataReader {
 export class GameReader {
   games: GameDataType[] = [];
   constructor(public reader: DataReader) {}
+
+  static fromCsv(filename: string): GameReader {
+    return new GameReader(new CsvFileReader(filename));
+  }
 
   load(): void {
     this.reader.read();
